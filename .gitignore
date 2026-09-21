@@ -1,0 +1,9 @@
+# Your messages. These never belong in a repo.
+corpus*.json
+profile*.json
+voice/
+*.txt.export
+
+__pycache__/
+*.pyc
+.DS_Store
