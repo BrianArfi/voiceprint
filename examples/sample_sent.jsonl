@@ -1,0 +1,300 @@
+{"id": 0, "ts": 1700000000, "text": "is this live yet?"}
+{"id": 1, "ts": 1700003600, "text": "sure, on it"}
+{"id": 2, "ts": 1700007200, "text": "yes that works"}
+{"id": 3, "ts": 1700010800, "text": "ah ok, makes sense"}
+{"id": 4, "ts": 1700014400, "text": "on my way"}
+{"id": 5, "ts": 1700018000, "text": "can you check this ya"}
+{"id": 6, "ts": 1700021600, "text": "can you check this ya"}
+{"id": 7, "ts": 1700025200, "text": "yes that works"}
+{"id": 8, "ts": 1700028800, "text": "ah ok, makes sense"}
+{"id": 9, "ts": 1700032400, "text": "any update on the checkout fix?"}
+{"id": 10, "ts": 1700036000, "text": "ah ok, makes sense"}
+{"id": 11, "ts": 1700039600, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 12, "ts": 1700043200, "text": "any update on the checkout fix?"}
+{"id": 13, "ts": 1700046800, "text": "is this live yet?"}
+{"id": 14, "ts": 1700050400, "text": "is this live yet?"}
+{"id": 15, "ts": 1700054000, "text": "ah ok, makes sense"}
+{"id": 16, "ts": 1700057600, "text": "hmm not sure, let me ask"}
+{"id": 17, "ts": 1700061200, "text": "ah ok, makes sense"}
+{"id": 18, "ts": 1700064800, "text": "ok will do"}
+{"id": 19, "ts": 1700068400, "text": "yes that works"}
+{"id": 20, "ts": 1700072000, "text": "ah ok, makes sense"}
+{"id": 21, "ts": 1700075600, "text": "ok will do"}
+{"id": 22, "ts": 1700079200, "text": "yes that works"}
+{"id": 23, "ts": 1700082800, "text": "which build is this?"}
+{"id": 24, "ts": 1700086400, "text": "send me the link ya"}
+{"id": 25, "ts": 1700090000, "text": "any update on the checkout fix?"}
+{"id": 26, "ts": 1700093600, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 27, "ts": 1700097200, "text": "nice, thanks ya"}
+{"id": 28, "ts": 1700100800, "text": "which build is this?"}
+{"id": 29, "ts": 1700104400, "text": "nice, thanks ya"}
+{"id": 30, "ts": 1700108000, "text": "can you check this ya"}
+{"id": 31, "ts": 1700111600, "text": "lgtm"}
+{"id": 32, "ts": 1700115200, "text": "which build is this?"}
+{"id": 33, "ts": 1700118800, "text": "who owns this one?"}
+{"id": 34, "ts": 1700122400, "text": "hmm not sure, let me ask"}
+{"id": 35, "ts": 1700126000, "text": "yes that works"}
+{"id": 36, "ts": 1700129600, "text": "which build is this?"}
+{"id": 37, "ts": 1700133200, "text": "done"}
+{"id": 38, "ts": 1700136800, "text": "ah ok, makes sense"}
+{"id": 39, "ts": 1700140400, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 40, "ts": 1700144000, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 41, "ts": 1700147600, "text": "hmm not sure, let me ask"}
+{"id": 42, "ts": 1700151200, "text": "can you share the screen recording?"}
+{"id": 43, "ts": 1700154800, "text": "ping me when it is up ya"}
+{"id": 44, "ts": 1700158400, "text": "hmm not sure, let me ask"}
+{"id": 45, "ts": 1700162000, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 46, "ts": 1700165600, "text": "hmm not sure, let me ask"}
+{"id": 47, "ts": 1700169200, "text": "send me the link ya"}
+{"id": 48, "ts": 1700172800, "text": "is the doc final?"}
+{"id": 49, "ts": 1700176400, "text": "sure, on it"}
+{"id": 50, "ts": 1700180000, "text": "nice, thanks ya"}
+{"id": 51, "ts": 1700183600, "text": "any update on the checkout fix?"}
+{"id": 52, "ts": 1700187200, "text": "who owns this one?"}
+{"id": 53, "ts": 1700190800, "text": "send me the link ya"}
+{"id": 54, "ts": 1700194400, "text": "sorry just saw this"}
+{"id": 55, "ts": 1700198000, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 56, "ts": 1700201600, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 57, "ts": 1700205200, "text": "done"}
+{"id": 58, "ts": 1700208800, "text": "can we move it to tomorrow?"}
+{"id": 59, "ts": 1700212400, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 60, "ts": 1700216000, "text": "is this live yet?"}
+{"id": 61, "ts": 1700219600, "text": "any update on the checkout fix?"}
+{"id": 62, "ts": 1700223200, "text": "ah ok, makes sense"}
+{"id": 63, "ts": 1700226800, "text": "nice, thanks ya"}
+{"id": 64, "ts": 1700230400, "text": "lgtm"}
+{"id": 65, "ts": 1700234000, "text": "is the doc final?"}
+{"id": 66, "ts": 1700237600, "text": "is this live yet?"}
+{"id": 67, "ts": 1700241200, "text": "on my way"}
+{"id": 68, "ts": 1700244800, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 69, "ts": 1700248400, "text": "noted, thanks"}
+{"id": 70, "ts": 1700252000, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 71, "ts": 1700255600, "text": "can we move it to tomorrow?"}
+{"id": 72, "ts": 1700259200, "text": "ping me when it is up ya"}
+{"id": 73, "ts": 1700262800, "text": "ok will do"}
+{"id": 74, "ts": 1700266400, "text": "ok will do"}
+{"id": 75, "ts": 1700270000, "text": "got it thanks"}
+{"id": 76, "ts": 1700273600, "text": "sure, on it"}
+{"id": 77, "ts": 1700277200, "text": "ah ok, makes sense"}
+{"id": 78, "ts": 1700280800, "text": "got it thanks"}
+{"id": 79, "ts": 1700284400, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 80, "ts": 1700288000, "text": "ok will do"}
+{"id": 81, "ts": 1700291600, "text": "is this live yet?"}
+{"id": 82, "ts": 1700295200, "text": "done"}
+{"id": 83, "ts": 1700298800, "text": "who owns this one?"}
+{"id": 84, "ts": 1700302400, "text": "who owns this one?"}
+{"id": 85, "ts": 1700306000, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 86, "ts": 1700309600, "text": "who owns this one?"}
+{"id": 87, "ts": 1700313200, "text": "is this live yet?"}
+{"id": 88, "ts": 1700316800, "text": "which build is this?"}
+{"id": 89, "ts": 1700320400, "text": "who owns this one?"}
+{"id": 90, "ts": 1700324000, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 91, "ts": 1700327600, "text": "ok will do"}
+{"id": 92, "ts": 1700331200, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 93, "ts": 1700334800, "text": "yes that works"}
+{"id": 94, "ts": 1700338400, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 95, "ts": 1700342000, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 96, "ts": 1700345600, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 97, "ts": 1700349200, "text": "let me check first"}
+{"id": 98, "ts": 1700352800, "text": "any update on the checkout fix?"}
+{"id": 99, "ts": 1700356400, "text": "noted, thanks"}
+{"id": 100, "ts": 1700360000, "text": "ping me when it is up ya"}
+{"id": 101, "ts": 1700363600, "text": "noted, thanks"}
+{"id": 102, "ts": 1700367200, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 103, "ts": 1700370800, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 104, "ts": 1700374400, "text": "who owns this one?"}
+{"id": 105, "ts": 1700378000, "text": "ok noted"}
+{"id": 106, "ts": 1700381600, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 107, "ts": 1700385200, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 108, "ts": 1700388800, "text": "ok go ahead"}
+{"id": 109, "ts": 1700392400, "text": "done"}
+{"id": 110, "ts": 1700396000, "text": "can you share the screen recording?"}
+{"id": 111, "ts": 1700399600, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 112, "ts": 1700403200, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 113, "ts": 1700406800, "text": "got it thanks"}
+{"id": 114, "ts": 1700410400, "text": "ok will do"}
+{"id": 115, "ts": 1700414000, "text": "who owns this one?"}
+{"id": 116, "ts": 1700417600, "text": "is the doc final?"}
+{"id": 117, "ts": 1700421200, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 118, "ts": 1700424800, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 119, "ts": 1700428400, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 120, "ts": 1700432000, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 121, "ts": 1700435600, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 122, "ts": 1700439200, "text": "let me check first"}
+{"id": 123, "ts": 1700442800, "text": "ping me when it is up ya"}
+{"id": 124, "ts": 1700446400, "text": "can you share the screen recording?"}
+{"id": 125, "ts": 1700450000, "text": "can we move it to tomorrow?"}
+{"id": 126, "ts": 1700453600, "text": "can you check this ya"}
+{"id": 127, "ts": 1700457200, "text": "let me check first"}
+{"id": 128, "ts": 1700460800, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 129, "ts": 1700464400, "text": "ah ok, makes sense"}
+{"id": 130, "ts": 1700468000, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 131, "ts": 1700471600, "text": "is the doc final?"}
+{"id": 132, "ts": 1700475200, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 133, "ts": 1700478800, "text": "done"}
+{"id": 134, "ts": 1700482400, "text": "yes that works"}
+{"id": 135, "ts": 1700486000, "text": "ok noted"}
+{"id": 136, "ts": 1700489600, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 137, "ts": 1700493200, "text": "is this live yet?"}
+{"id": 138, "ts": 1700496800, "text": "ok will do"}
+{"id": 139, "ts": 1700500400, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 140, "ts": 1700504000, "text": "ok will do"}
+{"id": 141, "ts": 1700507600, "text": "any update on the checkout fix?"}
+{"id": 142, "ts": 1700511200, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 143, "ts": 1700514800, "text": "lgtm"}
+{"id": 144, "ts": 1700518400, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 145, "ts": 1700522000, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 146, "ts": 1700525600, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 147, "ts": 1700529200, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 148, "ts": 1700532800, "text": "on my way"}
+{"id": 149, "ts": 1700536400, "text": "send me the link ya"}
+{"id": 150, "ts": 1700540000, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 151, "ts": 1700543600, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 152, "ts": 1700547200, "text": "who owns this one?"}
+{"id": 153, "ts": 1700550800, "text": "got it thanks"}
+{"id": 154, "ts": 1700554400, "text": "which build is this?"}
+{"id": 155, "ts": 1700558000, "text": "on my way"}
+{"id": 156, "ts": 1700561600, "text": "noted, thanks"}
+{"id": 157, "ts": 1700565200, "text": "yes that works"}
+{"id": 158, "ts": 1700568800, "text": "ok will do"}
+{"id": 159, "ts": 1700572400, "text": "noted, thanks"}
+{"id": 160, "ts": 1700576000, "text": "send me the link ya"}
+{"id": 161, "ts": 1700579600, "text": "noted, thanks"}
+{"id": 162, "ts": 1700583200, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 163, "ts": 1700586800, "text": "is the doc final?"}
+{"id": 164, "ts": 1700590400, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 165, "ts": 1700594000, "text": "ok will do"}
+{"id": 166, "ts": 1700597600, "text": "send me the link ya"}
+{"id": 167, "ts": 1700601200, "text": "who owns this one?"}
+{"id": 168, "ts": 1700604800, "text": "any update on the checkout fix?"}
+{"id": 169, "ts": 1700608400, "text": "sorry just saw this"}
+{"id": 170, "ts": 1700612000, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 171, "ts": 1700615600, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 172, "ts": 1700619200, "text": "can we move it to tomorrow?"}
+{"id": 173, "ts": 1700622800, "text": "can you check this ya"}
+{"id": 174, "ts": 1700626400, "text": "lgtm"}
+{"id": 175, "ts": 1700630000, "text": "hmm not sure, let me ask"}
+{"id": 176, "ts": 1700633600, "text": "got it thanks"}
+{"id": 177, "ts": 1700637200, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 178, "ts": 1700640800, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 179, "ts": 1700644400, "text": "is this live yet?"}
+{"id": 180, "ts": 1700648000, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 181, "ts": 1700651600, "text": "got it thanks"}
+{"id": 182, "ts": 1700655200, "text": "who owns this one?"}
+{"id": 183, "ts": 1700658800, "text": "hmm not sure, let me ask"}
+{"id": 184, "ts": 1700662400, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 185, "ts": 1700666000, "text": "on my way"}
+{"id": 186, "ts": 1700669600, "text": "lgtm"}
+{"id": 187, "ts": 1700673200, "text": "which build is this?"}
+{"id": 188, "ts": 1700676800, "text": "done"}
+{"id": 189, "ts": 1700680400, "text": "yes that works"}
+{"id": 190, "ts": 1700684000, "text": "ok go ahead"}
+{"id": 191, "ts": 1700687600, "text": "which build is this?"}
+{"id": 192, "ts": 1700691200, "text": "nice, thanks ya"}
+{"id": 193, "ts": 1700694800, "text": "can you check this ya"}
+{"id": 194, "ts": 1700698400, "text": "any update on the checkout fix?"}
+{"id": 195, "ts": 1700702000, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 196, "ts": 1700705600, "text": "sorry just saw this"}
+{"id": 197, "ts": 1700709200, "text": "noted, thanks"}
+{"id": 198, "ts": 1700712800, "text": "noted, thanks"}
+{"id": 199, "ts": 1700716400, "text": "lgtm"}
+{"id": 200, "ts": 1700720000, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 201, "ts": 1700723600, "text": "yes that works"}
+{"id": 202, "ts": 1700727200, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 203, "ts": 1700730800, "text": "can you check this ya"}
+{"id": 204, "ts": 1700734400, "text": "ok go ahead"}
+{"id": 205, "ts": 1700738000, "text": "can you check this ya"}
+{"id": 206, "ts": 1700741600, "text": "ok noted"}
+{"id": 207, "ts": 1700745200, "text": "sorry just saw this"}
+{"id": 208, "ts": 1700748800, "text": "any update on the checkout fix?"}
+{"id": 209, "ts": 1700752400, "text": "got it thanks"}
+{"id": 210, "ts": 1700756000, "text": "which build is this?"}
+{"id": 211, "ts": 1700759600, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 212, "ts": 1700763200, "text": "sorry just saw this"}
+{"id": 213, "ts": 1700766800, "text": "sure, on it"}
+{"id": 214, "ts": 1700770400, "text": "any update on the checkout fix?"}
+{"id": 215, "ts": 1700774000, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 216, "ts": 1700777600, "text": "let me check first"}
+{"id": 217, "ts": 1700781200, "text": "nice, thanks ya"}
+{"id": 218, "ts": 1700784800, "text": "on my way"}
+{"id": 219, "ts": 1700788400, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 220, "ts": 1700792000, "text": "hmm not sure, let me ask"}
+{"id": 221, "ts": 1700795600, "text": "done"}
+{"id": 222, "ts": 1700799200, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 223, "ts": 1700802800, "text": "ok noted"}
+{"id": 224, "ts": 1700806400, "text": "yes that works"}
+{"id": 225, "ts": 1700810000, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 226, "ts": 1700813600, "text": "any update on the checkout fix?"}
+{"id": 227, "ts": 1700817200, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 228, "ts": 1700820800, "text": "ping me when it is up ya"}
+{"id": 229, "ts": 1700824400, "text": "who owns this one?"}
+{"id": 230, "ts": 1700828000, "text": "can we move it to tomorrow?"}
+{"id": 231, "ts": 1700831600, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 232, "ts": 1700835200, "text": "ok will do"}
+{"id": 233, "ts": 1700838800, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 234, "ts": 1700842400, "text": "ok go ahead"}
+{"id": 235, "ts": 1700846000, "text": "is this live yet?"}
+{"id": 236, "ts": 1700849600, "text": "done"}
+{"id": 237, "ts": 1700853200, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 238, "ts": 1700856800, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 239, "ts": 1700860400, "text": "can you share the screen recording?"}
+{"id": 240, "ts": 1700864000, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 241, "ts": 1700867600, "text": "can you check this ya"}
+{"id": 242, "ts": 1700871200, "text": "can we move it to tomorrow?"}
+{"id": 243, "ts": 1700874800, "text": "i am not sure the label is clear. can we test it with two users first?"}
+{"id": 244, "ts": 1700878400, "text": "ok go ahead"}
+{"id": 245, "ts": 1700882000, "text": "send me the link ya"}
+{"id": 246, "ts": 1700885600, "text": "sorry just saw this"}
+{"id": 247, "ts": 1700889200, "text": "sorry just saw this"}
+{"id": 248, "ts": 1700892800, "text": "which build is this?"}
+{"id": 249, "ts": 1700896400, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 250, "ts": 1700900000, "text": "any update on the checkout fix?"}
+{"id": 251, "ts": 1700903600, "text": "nice, thanks ya"}
+{"id": 252, "ts": 1700907200, "text": "let me check first"}
+{"id": 253, "ts": 1700910800, "text": "can we move it to tomorrow?"}
+{"id": 254, "ts": 1700914400, "text": "sorry just saw this"}
+{"id": 255, "ts": 1700918000, "text": "ok will do"}
+{"id": 256, "ts": 1700921600, "text": "noted, thanks"}
+{"id": 257, "ts": 1700925200, "text": "sorry just saw this"}
+{"id": 258, "ts": 1700928800, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 259, "ts": 1700932400, "text": "sure, on it"}
+{"id": 260, "ts": 1700936000, "text": "nice, thanks ya"}
+{"id": 261, "ts": 1700939600, "text": "any update on the checkout fix?"}
+{"id": 262, "ts": 1700943200, "text": "on my way"}
+{"id": 263, "ts": 1700946800, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 264, "ts": 1700950400, "text": "ok go ahead"}
+{"id": 265, "ts": 1700954000, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 266, "ts": 1700957600, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 267, "ts": 1700961200, "text": "can you share the screen recording?"}
+{"id": 268, "ts": 1700964800, "text": "is this live yet?"}
+{"id": 269, "ts": 1700968400, "text": "ok go ahead"}
+{"id": 270, "ts": 1700972000, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 271, "ts": 1700975600, "text": "on my way"}
+{"id": 272, "ts": 1700979200, "text": "on my way"}
+{"id": 273, "ts": 1700982800, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 274, "ts": 1700986400, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 275, "ts": 1700990000, "text": "sure, on it"}
+{"id": 276, "ts": 1700993600, "text": "done"}
+{"id": 277, "ts": 1700997200, "text": "the api is fine, the issue is the cache. can you clear it and try again ya"}
+{"id": 278, "ts": 1701000800, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 279, "ts": 1701004400, "text": "ping me when it is up ya"}
+{"id": 280, "ts": 1701008000, "text": "any update on the checkout fix?"}
+{"id": 281, "ts": 1701011600, "text": "ok noted"}
+{"id": 282, "ts": 1701015200, "text": "can you check this ya"}
+{"id": 283, "ts": 1701018800, "text": "on my way"}
+{"id": 284, "ts": 1701022400, "text": "so the plan is to finish testing by friday, then release next week ya"}
+{"id": 285, "ts": 1701026000, "text": "can you check this ya"}
+{"id": 286, "ts": 1701029600, "text": "who owns this one?"}
+{"id": 287, "ts": 1701033200, "text": "can you check this ya"}
+{"id": 288, "ts": 1701036800, "text": "can you check the refund flow on staging? i think the button is still grey"}
+{"id": 289, "ts": 1701040400, "text": "ok will do"}
+{"id": 290, "ts": 1701044000, "text": "ping me when it is up ya"}
+{"id": 291, "ts": 1701047600, "text": "so here is where i landed after the call. the payment step stays as is, the label changes, and we only move the button if the test shows people miss it. can you set up the test this week? i will write the two questions for it ya"}
+{"id": 292, "ts": 1701051200, "text": "can we move it to tomorrow?"}
+{"id": 293, "ts": 1701054800, "text": "hmm not sure, let me ask"}
+{"id": 294, "ts": 1701058400, "text": "sure, on it"}
+{"id": 295, "ts": 1701062000, "text": "ping me when it is up ya"}
+{"id": 296, "ts": 1701065600, "text": "is the doc final?"}
+{"id": 297, "ts": 1701069200, "text": "sorry just saw this"}
+{"id": 298, "ts": 1701072800, "text": "ok go ahead"}
+{"id": 299, "ts": 1701076400, "text": "ah ok, makes sense"}
