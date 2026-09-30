@@ -21,6 +21,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -287,7 +288,7 @@ def flag_ai_drafted(rows, scan_dirs, min_words):
 
     True = found in the scanned tree, False = not found, None = too short to tell.
     """
-    hit_cache = {}
+    hit_cache, warned = {}, set()
     for r in rows:
         clean = strip_noise(r['text'])
         words = clean.split()
@@ -303,8 +304,19 @@ def flag_ai_drafted(rows, scan_dirs, min_words):
             try:
                 res = subprocess.run(['grep', '-rlF', '--', probe, d],
                                      capture_output=True, text=True, timeout=60)
-            except (OSError, subprocess.SubprocessError):
+            except OSError:
+                die('grep not found on PATH: --exclude-scan cannot search %s, so no '
+                    'AI-drafted message would be dropped. Install grep, or drop '
+                    '--exclude-scan if no AI has drafted messages for you.' % d)
+            except subprocess.SubprocessError as e:
+                warned.add(d)
+                print('warning: scan of %s failed (%s), treated as no match'
+                      % (d, e.__class__.__name__), file=sys.stderr)
                 continue
+            if res.returncode > 1 and d not in warned:
+                warned.add(d)
+                print('warning: grep could not read all of %s: %s'
+                      % (d, res.stderr.strip()[:200]), file=sys.stderr)
             if res.stdout.strip():
                 found = True
                 break
@@ -340,6 +352,10 @@ def cmd_ingest(args):
         missing = [d for d in args.exclude_scan if not os.path.isdir(d)]
         if missing:
             die('--exclude-scan paths do not exist: %s' % ', '.join(missing))
+        if not shutil.which('grep'):
+            die('grep not found on PATH: --exclude-scan needs it to search your drafts. '
+                'Install grep (macOS, Linux, WSL and Git Bash ship it), or drop '
+                '--exclude-scan if no AI has drafted messages for you.')
         print('scanning %d path(s) for AI-drafted messages' % len(args.exclude_scan),
               file=sys.stderr)
         flag_ai_drafted(uniq, args.exclude_scan, args.probe_words)

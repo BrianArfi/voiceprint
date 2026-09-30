@@ -14,6 +14,10 @@ and the project uses [Semantic Versioning](https://semver.org/).
 - `--version` prints the version, and `--changelog` prints this changelog (a list of versions, or `full` for the whole file).
 - This `CHANGELOG.md`, backfilled from the git history.
 
+### Fixed
+- `ingest --exclude-scan` now stops with an error when `grep` is not on PATH. Before, the scan found nothing and silently dropped no AI-drafted message.
+- The sample draft in `examples/draft.md` puts its sign-off on its own line, so the demo shows the sign-off check firing.
+
 ## [1.0.0] - 2026-09-21
 <!-- source: git commit f53eb12 "voiceprint: measure how you actually write, then hold drafts to it" (2026-09-21 20:14 +0700), the initial and only commit. No git tag or GitHub release exists; 1.0.0 labels this first public cut. -->
 

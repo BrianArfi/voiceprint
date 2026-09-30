@@ -91,6 +91,13 @@ def main():
             '--out', scanned)
     flagged = json.load(open(scanned, encoding='utf-8'))['counts']['ai_drafted']
     check('the AI-drafted message is caught', flagged > 0, 'flagged %d' % flagged)
+    no_grep = dict(os.environ, PATH=tmp)
+    r = subprocess.run([sys.executable, SCRIPT, 'ingest', '--source', 'jsonl', '--path',
+                        jsonl, '--exclude-scan', drafts, '--out',
+                        os.path.join(tmp, 'corpus_nogrep.json')],
+                       capture_output=True, text=True, env=no_grep)
+    check('a missing grep stops ingest, not a silent empty scan',
+          r.returncode != 0 and 'grep not found' in r.stderr, r.stderr)
 
     print('analyze')
     r = run('analyze', corpus, '--out', profile)

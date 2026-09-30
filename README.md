@@ -8,7 +8,7 @@ voiceprint reads the messages you already sent and measures how you write: how l
 [![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 [![Python 3.8+, standard library only](https://img.shields.io/badge/python-3.8%2B%20stdlib%20only-orange.svg)](#requirements)
 
-![A terminal shows an AI draft with a bold summary, three bullets and "Kindly let me know if you have any questions. Best regards". Then voiceprint check prints six FAIL lines: the draft is over the writer's 75th percentile length, it has a bulleted list and bold that appear in 0% of their messages, and it has three assistant filler phrases. It exits 1.](docs/voiceprint-check.png)
+![A terminal shows an AI draft with a bold summary, three bullets, "Kindly let me know if you have any questions." and "Best regards," on its own line. Then voiceprint check prints seven FAIL lines: 298 characters is over the writer's 75th percentile of 69, it has a bulleted list and bold that appear in 0% of their messages, it has three assistant filler phrases, and it has a sign-off. A note adds that 39.3% of their messages carry a question mark and the draft has none. It exits 1.](docs/voiceprint-check.png)
 
 ## AI writes your first draft now
 
@@ -65,7 +65,7 @@ flowchart LR
    `python3 scripts/voiceprint.py ingest --source slack --out corpus.json`
 2. **Drop the AI-drafted ones.** Point `--exclude-scan` at the folders where your old drafts live. The first nine words of each message are searched there, and a hit is dropped before anything is counted:
    `python3 scripts/voiceprint.py ingest --source slack --exclude-scan ./drafts ./docs --out corpus.json`
-3. **Analyze.** It measures the corpus and warns when the recent half is much longer than the older half, because that is often AI drafts the scan missed:
+3. **Analyze.** It measures the corpus and warns when the recent half's median length is more than 1.6 times the older half's, because that is often AI drafts the scan missed:
    `python3 scripts/voiceprint.py analyze corpus.json --out profile.json`
 4. **Render.** It writes `voice/voice.md` and `voice/voice_prompt.txt`:
    `python3 scripts/voiceprint.py render profile.json --out-dir ./voice --name "Sam"`
@@ -86,7 +86,7 @@ flowchart LR
 | `check`: a pre-send gate on length, rare habits, assistant filler and sign-offs, with exit codes | A hook that stops a draft that is not you, before anyone reads it |
 | A drift warning that compares the older and recent halves of your messages | Spotting AI-drafted messages the scan missed, or a voice that changed |
 
-![The top of a rendered voice.md: "Sari's voice", measured from 420 messages. A one-line model says she writes short, often entirely lowercase, and asks rather than announces. A length table shows a median of 34 characters and a 75th percentile of 41.](docs/voiceprint-length.png)
+![The top of a rendered voice.md: "Sari's voice", measured from 300 messages. A one-line model says she writes short, often entirely lowercase, and asks rather than announces. A length table shows a median of 19 characters, a 75th percentile of 69 and a 90th percentile of 74.](docs/voiceprint-length.png)
 
 All of it is one Python file with the standard library only. No dependencies, no install step, and nothing is sent to a model.
 
@@ -143,6 +143,7 @@ FAIL  Has bold, which appears in 0.0% of their messages.
 FAIL  Assistant filler: "i wanted to reach out".
 FAIL  Assistant filler: "kindly".
 FAIL  Assistant filler: "let me know if you have any questions".
+FAIL  Has a sign-off. Messages do not need one.
 note  No question mark, but 39.3% of their messages carry one.
 ```
 
@@ -218,7 +219,7 @@ The corpus is your private messages. It stays on your machine and is never sent 
 ## Requirements
 
 - **Python 3.8 or later.** Standard library only. Nothing to install.
-- **`grep` on your PATH** for `--exclude-scan`. macOS, Linux, WSL and Git Bash have it. Without it the scan finds nothing and no message is dropped.
+- **`grep` on your PATH** for `--exclude-scan`. macOS, Linux, WSL and Git Bash have it. Without it, ingest stops with an error.
 - **A Slack user token** (`xoxp-`) only for the live Slack source.
 - To run the tests: `python3 tests/test_voiceprint.py`. No network, no fixtures beyond a temp folder.
 
@@ -241,7 +242,7 @@ It can try, and the voice file helps. But a model drifts back to its own habits.
 
 ## Changelog
 
-The full history is in [CHANGELOG.md](CHANGELOG.md). **Latest: [1.0.0] - 2026-09-21**, the first public cut: `ingest`, `--exclude-scan`, `analyze`, `render` and `check`. Unreleased since then: `--version` and `--changelog`, which print the version and this changelog from the CLI:
+The full history is in [CHANGELOG.md](CHANGELOG.md). **Latest: [1.0.0] - 2026-09-21**, the first public cut: `ingest`, `--exclude-scan`, `analyze`, `render` and `check`. Unreleased since then: `--exclude-scan` stops with an error when `grep` is missing, instead of dropping nothing. And `--version` and `--changelog` print the version and this changelog from the CLI:
 
 ```bash
 python3 scripts/voiceprint.py --version            # voiceprint 1.0.0
