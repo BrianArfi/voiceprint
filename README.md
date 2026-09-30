@@ -137,7 +137,7 @@ python3 scripts/voiceprint.py check   --profile profile.json --file examples/dra
 The last command prints this and exits 1:
 
 ```text
-FAIL  Length 291 characters, over the p75 of 69. Longer than three out of four messages in the corpus.
+FAIL  Length 298 characters, over the p75 of 69. Longer than three out of four messages in the corpus.
 FAIL  Has a bulleted list, which appears in 0.0% of their messages.
 FAIL  Has bold, which appears in 0.0% of their messages.
 FAIL  Assistant filler: "i wanted to reach out".
