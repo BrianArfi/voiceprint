@@ -156,6 +156,22 @@ def main():
                            input='got it ya', capture_output=True, text=True)
     check('reads a draft from stdin', stdin.returncode == 0, stdin.stdout + stdin.stderr)
 
+    print('version and changelog')
+    heads = [l for l in open(vp.CHANGELOG_PATH, encoding='utf-8').read().splitlines()
+             if l.startswith('## [') and not l.startswith('## [Unreleased]')]
+    check('newest CHANGELOG release matches __version__',
+          heads and heads[0].startswith('## [%s]' % vp.__version__), heads[:1])
+    ver = run('--version')
+    check('--version prints the version',
+          ver.returncode == 0 and ver.stdout.strip() == 'voiceprint ' + vp.__version__,
+          ver.stdout + ver.stderr)
+    log = run('--changelog')
+    check('--changelog lists every version heading',
+          log.returncode == 0 and '[1.0.0]' in log.stdout, log.stdout + log.stderr)
+    full = run('--changelog', 'full')
+    check('--changelog full prints the file',
+          full.returncode == 0 and full.stdout.startswith('# Changelog'), full.stdout[:80])
+
     print()
     if FAILURES:
         print('%d failure(s): %s' % (len(FAILURES), ', '.join(FAILURES)))

@@ -15,6 +15,7 @@ and run with nothing installed.
     python3 voiceprint.py analyze corpus.json --out profile.json
     python3 voiceprint.py render profile.json --out-dir ./voice
     python3 voiceprint.py check --profile profile.json --file draft.md
+    python3 voiceprint.py --version | --changelog [list|full]
 """
 import argparse
 import json
@@ -27,6 +28,11 @@ import unicodedata
 import urllib.parse
 import urllib.request
 from collections import Counter
+
+__version__ = '1.0.0'
+CHANGELOG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              'CHANGELOG.md')
+CHANGELOG_URL = 'https://github.com/BrianArfi/voiceprint/blob/main/CHANGELOG.md'
 
 # --------------------------------------------------------------------------
 # shared helpers
@@ -922,10 +928,35 @@ def cmd_check(args):
 
 # --------------------------------------------------------------------------
 
-def main():
+def changelog_text(mode='list'):
+    """The bundled CHANGELOG.md: a list of version headings, or the full text."""
+    try:
+        with open(CHANGELOG_PATH, encoding='utf-8') as f:
+            text = f.read()
+    except OSError:
+        return ('voiceprint %s. CHANGELOG.md is not bundled with this copy; '
+                'read it at %s' % (__version__, CHANGELOG_URL))
+    if mode == 'full':
+        return text.rstrip('\n')
+    heads = [line[3:].strip() for line in text.splitlines() if line.startswith('## [')]
+    return '\n'.join(['voiceprint %s' % __version__] + heads +
+                     ['', 'Full text: --changelog full'])
+
+
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    if '--changelog' in argv:
+        i = argv.index('--changelog')
+        mode = argv[i + 1] if i + 1 < len(argv) and argv[i + 1] in ('list', 'full') else 'list'
+        print(changelog_text(mode))
+        return 0
+
     p = argparse.ArgumentParser(
         prog='voiceprint', description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument('--version', action='version', version='voiceprint ' + __version__)
+    p.add_argument('--changelog', nargs='?', const='list', choices=['list', 'full'],
+                   help='print the bundled changelog: version list, or full text')
     sub = p.add_subparsers(dest='cmd', required=True)
 
     g = sub.add_parser('ingest', help='pull your own sent messages into a corpus')
@@ -970,7 +1001,7 @@ def main():
                    help='a habit at or under this %% counts as banned')
     c.set_defaults(func=cmd_check)
 
-    args = p.parse_args()
+    args = p.parse_args(argv)
     return args.func(args)
 
 

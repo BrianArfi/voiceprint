@@ -1,5 +1,7 @@
 # voiceprint
 
+![version 1.0.0](https://img.shields.io/badge/version-1.0.0-blue) Version 1.0.0. See [CHANGELOG.md](CHANGELOG.md).
+
 Your AI writes like an AI. Not because the model is bad, but because the instruction you
 gave it is wrong: "write like me" is a description written from memory, and nobody
 remembers how they actually write.
@@ -67,6 +69,17 @@ samples, so read them before you share that file.
 
 ```bash
 python3 tests/test_voiceprint.py
+```
+
+## Changelog
+
+Every release is recorded in [CHANGELOG.md](CHANGELOG.md), newest first. The CLI
+reads the same file:
+
+```bash
+python3 scripts/voiceprint.py --version            # voiceprint 1.0.0
+python3 scripts/voiceprint.py --changelog          # list of versions
+python3 scripts/voiceprint.py --changelog full     # the whole changelog
 ```
 
 ## License
