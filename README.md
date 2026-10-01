@@ -18,7 +18,7 @@ You let Claude or ChatGPT draft your Slack replies and work chats, and the draft
 - **Leaves out the messages an AI already drafted for you**, so it does not learn the assistant's voice.
 - **Writes a voice file** with your numbers and real sample messages, for your AI to read before it drafts.
 - **Flags a draft that is not you** before you send it: too long, a habit you never have, assistant filler, a sign-off. It names each problem. It does not rewrite.
-- **Stays on your machine.** One Python file, standard library only, nothing sent to a model.
+- **Nothing goes to an AI model.** One Python file, standard library only. It reads Slack through the Slack API with your own token, or from an export file.
 
 ## Quick start
 
@@ -31,9 +31,13 @@ python3 scripts/voiceprint.py analyze corpus.json --out profile.json
 python3 scripts/voiceprint.py check   --profile profile.json --file examples/draft.md
 ```
 
+On your own unzipped Slack export: `python3 scripts/voiceprint.py ingest --source slack-export --path ./export --me <your Slack user id> --out corpus.json`
+
+Then `render` writes `voice/voice.md`. Point Claude Code or ChatGPT at `voice.md` before it drafts (see [how it works](docs/how-it-works.md)).
+
 ## Example
 
-The writer in the sample sends short, lowercase messages (median 19 characters). An AI drafts this for them, in [`examples/draft.md`](examples/draft.md):
+The writer in the sample sends short, lowercase messages (half their messages are 19 characters or shorter). An AI drafts this for them, in [`examples/draft.md`](examples/draft.md):
 
 > Hi Dina, I wanted to reach out regarding the checkout button.
 >
