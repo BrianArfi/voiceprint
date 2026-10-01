@@ -4,7 +4,7 @@
 
 voiceprint reads the messages you already sent and measures how you write: how long, how you open, the words that end your sentences, and the habits you never have. Then it holds every AI draft against that profile before it goes out. It does not rewrite the draft. It names the parts that are not you, and says why.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 [![Python 3.8+, standard library only](https://img.shields.io/badge/python-3.8%2B%20stdlib%20only-orange.svg)](#requirements)
 
@@ -252,4 +252,4 @@ python3 scripts/voiceprint.py --changelog full     # the whole changelog
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
