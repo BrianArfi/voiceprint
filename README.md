@@ -6,7 +6,7 @@
 [![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 [![GitHub stars](https://img.shields.io/github/stars/BrianArfi/voiceprint?style=social)](https://github.com/BrianArfi/voiceprint/stargazers)
 
-![A terminal shows an AI draft with a bold summary, three bullets, "Kindly let me know if you have any questions." and "Best regards," on its own line. Then voiceprint check prints seven FAIL lines: 298 characters is over the writer's 75th percentile of 69, it has a bulleted list and bold that appear in 0% of their messages, it has three assistant filler phrases, and it has a sign-off. A note adds that 39.3% of their messages carry a question mark and the draft has none. It exits 1.](docs/voiceprint-check.png)
+![Headline: "Catch the draft that isn't you." Left, a draft reply to Dina marked "written by your AI", with lime underlines and flags on "I wanted to reach out" (assistant filler), a three-bullet list (bullets: 0% of Sari's messages) and "Best regards," (sign-off), plus a footer reading 7 FAIL, 298 chars against a p75 of 69. Right, "How Sari really writes" from 300 sent messages: median length 19 chars, usual opener "can you", ends a sentence with "ya" 19% of the time, bullets, bold and sign-offs 0%, and a real sample, "can you check this ya". The draft text is left as is: it flags, it does not rewrite.](docs/hero.png)
 
 ## Why
 
@@ -19,6 +19,8 @@ You let Claude or ChatGPT draft your Slack replies and work chats, and the draft
 - **Writes a voice file** with your numbers and real sample messages, for your AI to read before it drafts.
 - **Flags a draft that is not you** before you send it: too long, a habit you never have, assistant filler, a sign-off. It names each problem. It does not rewrite.
 - **Nothing goes to an AI model.** One Python file, standard library only. It reads Slack through the Slack API with your own token, or from an export file.
+
+![A terminal runs the Quick start on the sample writer. ingest reads 300 messages, analyze reports a median of 19 characters and a p75 of 69. cat shows the AI draft with bold, bullets, "Kindly" and "Best regards,". check prints seven red FAIL lines and exits 1. Then check runs on the same news in the writer's style, "pay button goes to the bottom, label is bayar sekarang. ok ya?", and prints PASS, exit 0.](docs/demo.gif)
 
 ## Quick start
 
