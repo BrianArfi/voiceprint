@@ -21,39 +21,39 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 1600px; height: 800px; background: var(--paper); color: var(--ink); font-family: var(--sans); overflow: hidden; }
-  .stage { position: relative; width: 1600px; height: 800px; padding: 50px 72px; }
+  .stage { position: relative; width: 1600px; height: 800px; padding: 64px 72px; }
 
   /* Headline */
-  .kicker { font-family: var(--mono); font-size: 20px; font-weight: 600; color: var(--field); letter-spacing: .02em; display: flex; align-items: center; gap: 12px; }
-  .kicker .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px var(--field); }
+  .kicker { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--field); display: flex; align-items: center; gap: 12px; }
+  .kicker .dot { width: 14px; height: 14px; background: var(--signal); border: 3px solid var(--ink); border-radius: 3px; display: inline-block; }
   h1 { font-family: var(--head); font-weight: 900; font-size: 66px; line-height: 1.02; letter-spacing: -0.025em; margin-top: 14px; color: var(--ink); }
   h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--signal) 62%, var(--signal) 92%, transparent 92%); padding: 0 4px; }
 
-  .row { position: absolute; left: 72px; right: 72px; top: 262px; display: flex; gap: 40px; align-items: stretch; }
+  .row { position: absolute; left: 72px; right: 72px; top: 268px; display: flex; gap: 40px; align-items: flex-start; }
 
   /* Draft card: a chat composer holding the AI draft */
   .draft { width: 880px; display: flex; flex-direction: column; background: #fff; border: 2px solid var(--ink); border-radius: 18px; box-shadow: 10px 10px 0 var(--field); overflow: visible; position: relative; }
   .draft-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1.5px solid var(--line); font-size: 18px; color: var(--muted); }
   .draft-head b { color: var(--ink); font-weight: 600; }
   .tag-ai { font-family: var(--mono); font-size: 14px; font-weight: 600; background: var(--paper); color: var(--field); border: 1.5px solid var(--field); border-radius: 999px; padding: 3px 12px; }
-  .msg { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px 28px 24px; font-size: 21px; line-height: 1.5; color: #24302d; }
+  .msg { display: flex; flex-direction: column; padding: 18px 28px 18px; font-size: 20px; line-height: 1.5; color: #24302d; }
   .msg p, .msg ul { position: relative; }
-  .msg p + p, .msg ul + p { margin-top: 10px; }
-  .msg ul { list-style: none; margin-top: 4px; }
+  .msg p + p, .msg ul + p, .msg p + ul { margin-top: 9px; }
+  .msg ul { list-style: none; }
   .msg li::before { content: "\2022"; margin-right: 12px; color: #8a9893; }
   .hit { position: relative; text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: 6px; text-underline-offset: 5px; text-decoration-skip-ink: none; }
   .block-hit { border-left: 6px solid var(--signal); margin-left: -18px; padding-left: 12px; }
   .flag { position: absolute; font-family: var(--mono); font-size: 15px; font-weight: 700; line-height: 1; white-space: nowrap; background: var(--ink); color: var(--signal); padding: 8px 12px 8px 10px; border-radius: 8px; display: flex; align-items: center; gap: 8px; }
   .flag::before { content: ""; width: 8px; height: 8px; background: var(--signal); border-radius: 2px; transform: rotate(45deg); }
   .flag { right: -50px; top: 50%; transform: translateY(-50%); box-shadow: 0 4px 0 rgba(7,43,39,.18); }
-  .exit { display: flex; gap: 14px; align-items: center; padding: 14px 24px; border-top: 1.5px solid var(--line); font-family: var(--mono); font-size: 16px; color: var(--muted); background: #FAFBF8; border-radius: 0 0 16px 16px; }
-  .exit .fail { color: #fff; background: var(--field); padding: 3px 10px; border-radius: 6px; font-weight: 700; }
+  .exit { margin-top: auto; display: flex; gap: 14px; align-items: center; padding: 14px 24px; border-top: 1.5px solid var(--line); font-family: var(--mono); font-size: 16px; color: var(--muted); background: #FAFBF8; border-radius: 0 0 16px 16px; }
+  .exit .fail { color: #fff; background: #C2412D; padding: 3px 10px; border-radius: 6px; font-weight: 700; }
 
   /* Voice card: the writer's real numbers */
   .voice { flex: 1; background: var(--field); color: var(--paper); border-radius: 18px; padding: 28px 30px 26px; border: 2px solid var(--ink); }
   .voice h2 { font-family: var(--head); font-weight: 800; font-size: 28px; letter-spacing: -0.01em; display: flex; align-items: baseline; justify-content: space-between; }
   .voice h2 small { font-family: var(--mono); font-size: 14px; font-weight: 400; color: #A9C2BC; letter-spacing: 0; }
-  .stat { display: flex; align-items: baseline; justify-content: space-between; padding: 15px 0; border-top: 1.5px solid rgba(241,243,238,.16); }
+  .stat { display: flex; align-items: baseline; justify-content: space-between; padding: 12px 0; border-top: 1.5px solid rgba(241,243,238,.16); }
   .stat:first-of-type { margin-top: 16px; }
   .stat .k { font-size: 18px; color: #C9D8D4; }
   .stat .v { font-family: var(--mono); font-size: 26px; font-weight: 700; color: #fff; }
@@ -62,29 +62,31 @@
   .sample { margin-top: 14px; background: var(--ink); border-radius: 12px; padding: 14px 16px; font-family: var(--mono); font-size: 17px; color: var(--paper); }
   .sample span { color: #8FB0A8; font-size: 13px; display: block; margin-bottom: 6px; letter-spacing: .04em; text-transform: uppercase; }
 
-  .note { position: absolute; right: 72px; top: 150px; width: 520px; text-align: right; font-size: 20px; line-height: 1.45; color: var(--muted); }
+  .note { margin-top: 14px; font-size: 22px; line-height: 1.4; color: var(--muted); }
+  .bold-hit { font-weight: 700; }
   .note b { color: var(--ink); }
 </style>
 </head>
 <body>
 <div class="stage">
-  <div class="kicker"><span class="dot"></span>voiceprint check</div>
-  <h1>Catch the draft<br>that <em>isn't you.</em></h1>
-  <p class="note">Measured on the messages you already sent.<br><b>It flags. You fix.</b> Nothing goes to a model.</p>
+  <div class="kicker"><span class="dot"></span>voiceprint</div>
+  <h1>Catch the draft that <em>isn't you.</em></h1>
+  <p class="note">Measured on the messages you already sent. <b>It flags. You fix.</b> Nothing goes to a model.</p>
 
   <div class="row">
     <div class="draft">
       <div class="draft-head"><span>Draft reply to <b>Dina</b></span><span class="tag-ai">written by your AI</span></div>
       <div class="msg">
         <p>Hi Dina, <span class="hit">I wanted to reach out</span> regarding the checkout button.<span class="flag">assistant filler</span></p>
+        <p><span class="hit bold-hit">**Summary of the decision:**</span><span class="flag">bold: 0%</span></p>
         <ul class="block-hit">
           <li>The pay button will be moved to the bottom of the screen</li>
           <li>The label will read "Bayar sekarang"</li>
           <li>This will be included in the next sprint</li>
           <span class="flag">bullets: 0% of Sari's messages</span>
         </ul>
-        <p><span class="hit">Kindly</span> let me know if you have any questions.</p>
-        <p><span class="hit">Best regards,</span><span class="flag">sign-off: never</span></p>
+        <p><span class="hit">Kindly let me know if you have any questions.</span><span class="flag">filler: kindly</span></p>
+        <p><span class="hit">Best regards,</span><br>Sari<span class="flag">sign-off: never</span></p>
       </div>
       <div class="exit"><span class="fail">7 FAIL</span><span>298 chars, your p75 is 69</span></div>
     </div>

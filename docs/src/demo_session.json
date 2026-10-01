@@ -1,0 +1,32 @@
+[
+ {
+  "cmd": "python3 scripts/voiceprint.py ingest --source jsonl --path examples/sample_sent.jsonl --out corpus.json",
+  "out": "wrote corpus.json: 300 messages, not scanned for AI-drafted sends. Pass --exclude-scan <dir> to filter those out.",
+  "typed": false,
+  "hold": 0
+ },
+ {
+  "cmd": "python3 scripts/voiceprint.py analyze corpus.json --out profile.json",
+  "out": "wrote profile.json\n  300 messages measured, 0 AI-drafted excluded\n  median 19 chars, p75 69, under 200 chars 95%",
+  "typed": false,
+  "hold": 2000
+ },
+ {
+  "cmd": "head -n 3 examples/draft.md",
+  "out": "Hi Dina, I wanted to reach out regarding the checkout button.\n\n**Summary of the decision:**",
+  "typed": true,
+  "hold": 900
+ },
+ {
+  "cmd": "python3 scripts/voiceprint.py check --profile profile.json --file examples/draft.md",
+  "out": "FAIL  Length 298 characters, over the p75 of 69. Longer than three out of four messages in the corpus.\nFAIL  Has a bulleted list, which appears in 0.0% of their messages.\nFAIL  Has bold, which appears in 0.0% of their messages.\nFAIL  Assistant filler: \"i wanted to reach out\".\nFAIL  Assistant filler: \"kindly\".\nFAIL  Assistant filler: \"let me know if you have any questions\".\nFAIL  Has a sign-off. Messages do not need one.\nnote  No question mark, but 39.3% of their messages carry one.\nexit 1",
+  "typed": true,
+  "hold": 2200
+ },
+ {
+  "cmd": "python3 scripts/voiceprint.py check --profile profile.json --text \"pay button to bottom, bayar sekarang?\"",
+  "out": "PASS  37 characters against a p75 of 69.\nexit 0",
+  "typed": true,
+  "hold": 2600
+ }
+]
