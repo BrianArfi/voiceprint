@@ -1,0 +1,20 @@
+[
+ {
+  "cmd": "python3 scripts/voiceprint.py render profile.json --out-dir voice --name \"Sari\"",
+  "out": "wrote voice\\voice.md\nwrote voice\\voice_prompt.txt\n\nThe numbers are done. The \"Rules\" section is not: read the samples in voice.md and write it.",
+  "typed": true,
+  "hold": 1600
+ },
+ {
+  "cmd": "head -n 5 voice/voice_prompt.txt",
+  "out": "HOW SARI WRITES (measured from 300 messages they typed themselves)\n\nLength is the biggest tell. Median message is 19 characters, 4 words.\n95.0% are under 200 characters. A draft longer than 69 characters is longer than\nthree out of four things they have ever sent. Cut it.",
+  "typed": true,
+  "hold": 2200
+ },
+ {
+  "cmd": "grep -A4 \"Last word of a sentence\" voice/voice.md",
+  "out": "| Last word of a sentence | Ends sentences | Share of endings | Lift |\n| :--- | ---: | ---: | ---: |\n| `ya` | 21 | 19.4% | 6.1x |\n| `first` | 6 | 5.6% | 5.8x |\n| `yet` | 3 | 2.8% | 5.4x |",
+  "typed": true,
+  "hold": 3200
+ }
+]

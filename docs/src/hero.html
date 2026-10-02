@@ -65,6 +65,23 @@
   .note { margin-top: 14px; font-size: 22px; line-height: 1.4; color: var(--muted); }
   .bold-hit { font-weight: 700; }
   .note b { color: var(--ink); }
+
+  /* Motion. The page plays once in 9.2 s (record_html.py seeks it frame by frame for
+     docs/hero.gif); render.py freezes it at 7 s for the static docs/hero.png. */
+  @keyframes rise { from { opacity: 0; translate: 0 26px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes pop  { 0% { opacity: 0; scale: .6; } 70% { opacity: 1; scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+  @keyframes mark { from { text-decoration-color: transparent; } to { text-decoration-color: var(--signal); } }
+  @keyframes bar  { from { border-left-color: transparent; } to { border-left-color: var(--signal); } }
+  @keyframes hl   { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+  @keyframes out  { to { opacity: 0; } }
+  h1 em { background-repeat: no-repeat; animation: hl .7s .2s ease-out both; }
+  .draft { animation: rise .6s .3s ease-out both, out .5s 8.5s forwards; }
+  .voice { animation: rise .6s 4.4s ease-out both, out .5s 8.5s forwards; }
+  .hit { animation: mark .35s var(--d) both; }
+  .block-hit { animation: bar .35s var(--d) both; }
+  .flag { animation: pop .4s var(--d) ease-out both; }
+  .exit .fail { display: inline-block; animation: pop .45s 4.0s ease-out both; }
+  .stat, .sample { animation: rise .45s var(--d) ease-out both; }
 </style>
 </head>
 <body>
@@ -77,27 +94,27 @@
     <div class="draft">
       <div class="draft-head"><span>Draft reply to <b>Dina</b></span><span class="tag-ai">written by your AI</span></div>
       <div class="msg">
-        <p>Hi Dina, <span class="hit">I wanted to reach out</span> regarding the checkout button.<span class="flag">assistant filler</span></p>
-        <p><span class="hit bold-hit">**Summary of the decision:**</span><span class="flag">bold: 0%</span></p>
-        <ul class="block-hit">
+        <p>Hi Dina, <span class="hit" style="--d:1.3s">I wanted to reach out</span> regarding the checkout button.<span class="flag" style="--d:1.3s">assistant filler</span></p>
+        <p><span class="hit bold-hit" style="--d:1.85s">**Summary of the decision:**</span><span class="flag" style="--d:1.85s">bold: 0%</span></p>
+        <ul class="block-hit" style="--d:2.4s">
           <li>The pay button will be moved to the bottom of the screen</li>
           <li>The label will read "Bayar sekarang"</li>
           <li>This will be included in the next sprint</li>
-          <span class="flag">bullets: 0% of Sari's messages</span>
+          <span class="flag" style="--d:2.4s">bullets: 0% of Sari's messages</span>
         </ul>
-        <p><span class="hit">Kindly let me know if you have any questions.</span><span class="flag">filler: kindly</span></p>
-        <p><span class="hit">Best regards,</span><br>Sari<span class="flag">sign-off: never</span></p>
+        <p><span class="hit" style="--d:2.95s">Kindly let me know if you have any questions.</span><span class="flag" style="--d:2.95s">filler: kindly</span></p>
+        <p><span class="hit" style="--d:3.5s">Best regards,</span><br>Sari<span class="flag" style="--d:3.5s">sign-off: never</span></p>
       </div>
       <div class="exit"><span class="fail">7 FAIL</span><span>298 chars, your p75 is 69</span></div>
     </div>
 
     <div class="voice">
       <h2>How Sari really writes <small>300 sent messages</small></h2>
-      <div class="stat"><span class="k">Median length</span><span class="v sig">19 chars</span></div>
-      <div class="stat"><span class="k">Usual opener</span><span class="v">"can you"</span></div>
-      <div class="stat"><span class="k">Ends a sentence with</span><span class="v">"ya" <span class="vs">19%</span></span></div>
-      <div class="stat"><span class="k">Bullets, bold, sign-offs</span><span class="v">0%</span></div>
-      <div class="sample"><span>A real one</span>can you check this ya</div>
+      <div class="stat" style="--d:4.7s"><span class="k">Median length</span><span class="v sig">19 chars</span></div>
+      <div class="stat" style="--d:5.0s"><span class="k">Usual opener</span><span class="v">"can you"</span></div>
+      <div class="stat" style="--d:5.3s"><span class="k">Ends a sentence with</span><span class="v">"ya" <span class="vs">19%</span></span></div>
+      <div class="stat" style="--d:5.6s"><span class="k">Bullets, bold, sign-offs</span><span class="v">0%</span></div>
+      <div class="sample" style="--d:6.0s"><span>A real one</span>can you check this ya</div>
     </div>
   </div>
 </div>

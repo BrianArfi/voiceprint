@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>voiceprint how it works</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Illustration for docs/how-it-works.gif. The numbers are the real ones for the shipped
+     sample writer: 300 messages, median 19, p75 69, opener "can you", "ya" 19.4% of endings. */
+  :root { --paper:#F1F3EE; --field:#0D453E; --ink:#072B27; --signal:#C8F751; --line:#D5DBD0;
+          --muted:#5E716C; --red:#C2412D;
+          --head:"Archivo", system-ui, sans-serif; --sans:"Inter", system-ui, sans-serif;
+          --mono:"JetBrains Mono", Consolas, monospace; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 640px; background: var(--paper); color: var(--ink); font-family: var(--sans); overflow: hidden; }
+  .stage { position: relative; width: 1200px; height: 640px; padding: 34px 40px; animation: out .5s 9.4s forwards; }
+  .kicker { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--field); }
+  h2 { font-family: var(--head); font-weight: 900; font-size: 42px; letter-spacing: -0.02em; margin-top: 6px; }
+  h2 em { font-style: normal; background: linear-gradient(transparent 60%, var(--signal) 60%, var(--signal) 92%, transparent 92%) no-repeat; padding: 0 4px; animation: hl .6s 6.2s ease-out both; }
+
+  .row { position: absolute; left: 36px; top: 140px; display: flex; gap: 48px; }
+  .box { width: 246px; height: 440px; background: #fff; border: 3px solid var(--ink); border-radius: 16px; box-shadow: 6px 6px 0 var(--ink); padding: 18px 18px; display: flex; flex-direction: column; animation: rise .5s var(--d) ease-out both; position: relative; }
+  .box.dark { background: var(--field); color: var(--paper); }
+  .num { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--field); display: flex; align-items: center; gap: 8px; }
+  .dark .num { color: var(--signal); }
+  .num i { width: 26px; height: 26px; border-radius: 50%; background: var(--signal); border: 2px solid var(--ink); display: inline-flex; align-items: center; justify-content: center; font-style: normal; color: var(--ink); font-size: 14px; }
+  .box h3 { font-family: var(--head); font-weight: 800; font-size: 26px; letter-spacing: -0.01em; margin-top: 10px; line-height: 1.05; }
+  .box .what { font-size: 17px; line-height: 1.35; color: var(--muted); margin-top: 6px; }
+  .dark .what { color: #C9D8D4; }
+  .items { margin-top: 14px; display: flex; flex-direction: column; gap: 7px; }
+  .it { animation: rise .35s var(--d) ease-out both; }
+  .bub { align-self: flex-start; white-space: nowrap; font-family: var(--mono); font-size: 15px; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 12px 12px 12px 3px; padding: 5px 10px; }
+  .bub.ai { background: #F6E3DF; border-color: var(--red); color: var(--red); text-decoration: line-through; }
+  .kv { display: flex; justify-content: space-between; align-items: baseline; font-size: 17px; border-top: 1.5px solid rgba(241,243,238,.18); padding-top: 6px; }
+  .kv b { font-family: var(--mono); font-size: 19px; color: #fff; }
+  .kv b.sig { color: var(--signal); }
+  .doc { font-size: 16px; line-height: 1.35; background: var(--paper); border-radius: 8px; padding: 10px 12px; color: #34403d; }
+  .doc u { text-decoration: underline 4px var(--signal); text-underline-offset: 3px; }
+  .verdict { display: flex; flex-direction: column; gap: 4px; font-family: var(--mono); font-size: 16px; }
+  .tag { display: inline-block; font-weight: 700; padding: 3px 10px; border-radius: 6px; margin-right: 6px; }
+  .tag.fail { background: var(--red); color: #fff; }
+  .tag.pass { background: var(--signal); color: var(--ink); border: 2px solid var(--ink); }
+  .verdict small { color: var(--muted); font-size: 15px; }
+
+  .arrow { position: absolute; top: 358px; width: 48px; height: 4px; background: var(--ink); transform-origin: left center; animation: draw .4s var(--d) ease-out both; }
+  .arrow::after { content: ""; position: absolute; right: -2px; top: -6px; border-left: 12px solid var(--ink); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+  .dot { position: absolute; top: 352px; width: 16px; height: 16px; border-radius: 50%; background: var(--signal); border: 2px solid var(--ink); animation: travel .6s var(--d) ease-in-out both; }
+  .cap { position: absolute; right: 40px; top: 46px; font-family: var(--mono); font-size: 15px; color: var(--muted); }
+
+  @keyframes rise { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes draw { from { scale: 0 1; } to { scale: 1 1; } }
+  @keyframes travel { 0% { opacity: 0; translate: 0 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; translate: 40px 0; } }
+  @keyframes hl { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+  @keyframes out { to { opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="kicker">how it works</div>
+  <h2>Measure once. <em>Check every draft.</em></h2>
+  <div class="cap">Illustration. Numbers from the sample run.</div>
+
+  <div class="row">
+    <div class="box" style="--d:.4s">
+      <div class="num"><i>1</i>ingest</div>
+      <h3>Your sent messages</h3>
+      <div class="what">From Slack, WhatsApp, JSONL or text. Old AI drafts left out.</div>
+      <div class="items">
+        <div class="bub it" style="--d:.9s">is this live yet?</div>
+        <div class="bub it" style="--d:1.1s">sure, on it</div>
+        <div class="bub it" style="--d:1.3s">can you check this ya</div>
+        <div class="bub ai it" style="--d:1.5s">Kindly advise.</div>
+        <div class="bub it" style="--d:1.7s">on my way</div>
+      </div>
+    </div>
+    <div class="box dark" style="--d:2.4s">
+      <div class="num"><i>2</i>analyze</div>
+      <h3>Your numbers</h3>
+      <div class="what">300 messages measured, plus voice.md for your AI.</div>
+      <div class="items">
+        <div class="kv it" style="--d:2.9s"><span>Median</span><b class="sig">19 chars</b></div>
+        <div class="kv it" style="--d:3.1s"><span>p75</span><b class="sig">69 chars</b></div>
+        <div class="kv it" style="--d:3.3s"><span>Opener</span><b>"can you"</b></div>
+        <div class="kv it" style="--d:3.5s"><span>Ends with</span><b>"ya" 19%</b></div>
+        <div class="kv it" style="--d:3.7s"><span>Bullets, bold</span><b>0%</b></div>
+      </div>
+    </div>
+    <div class="box" style="--d:4.4s">
+      <div class="num"><i>3</i>check</div>
+      <h3>Your AI's draft</h3>
+      <div class="what">Held to those numbers, before it is sent.</div>
+      <div class="items">
+        <div class="doc it" style="--d:4.9s">Hi Dina, <u>I wanted to reach out</u> regarding...</div>
+        <div class="doc it" style="--d:5.2s"><u>**Summary of the decision:**</u> and 3 bullets</div>
+        <div class="doc it" style="--d:5.5s"><u>Kindly</u> let me know... <u>Best regards,</u></div>
+      </div>
+    </div>
+    <div class="box" style="--d:6.0s">
+      <div class="num"><i>4</i>verdict</div>
+      <h3>Pass or fail</h3>
+      <div class="what">One line per problem. It does not rewrite.</div>
+      <div class="items">
+        <div class="verdict it" style="--d:6.5s"><div><span class="tag fail">FAIL</span>x7</div><small>298 chars, p75 69, bullets, bold, filler, sign-off. exit 1</small></div>
+        <div class="verdict it" style="--d:7.4s"><div><span class="tag pass">PASS</span>37 chars</div><small>"pay button to bottom, bayar sekarang?" exit 0</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow" style="left:282px; --d:2.0s"></div><div class="dot" style="left:284px; --d:1.9s"></div>
+  <div class="arrow" style="left:576px; --d:4.0s"></div><div class="dot" style="left:578px; --d:3.9s"></div>
+  <div class="arrow" style="left:870px; --d:5.6s"></div><div class="dot" style="left:872px; --d:5.5s"></div>
+</div>
+</body>
+</html>
